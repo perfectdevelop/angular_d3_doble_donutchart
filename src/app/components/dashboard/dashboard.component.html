@@ -1,0 +1,72 @@
+<div class="pageContainer">
+    <div class="option-container marginUpDown">
+        <span class="example-spacer icon-class-size"></span>
+    </div>
+    <section class="container full-container">
+        
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 component-container-firstrow component-container">
+                    COMPONENT
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 component-container-firstrow component-container">
+                    COMPONENT
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 component-container-firstrow component-container">
+                    COMPONENT
+                </div>
+            <!-- </div>
+            <div class="row"> -->
+                <div class="col-lg-4 col-md-6 col-sm-12 component-container">
+                    COMPONENT
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 component-container">
+                    COMPONENT
+                </div>
+
+            <!-- BEGIN CHART COMPONENET PART -->
+
+                <div class="col-lg-4 col-md-6 col-sm-12 component-container d3-chart">
+                    <div class="chart-title"><span id="chart-title">GARANTÍAS ANUAL DE DESEMPENO</span><span>
+                            <mat-icon>keyboard_arrow_right</mat-icon>
+                        </span></div>
+                    <div class="chart-body">
+                        <div class="main-chart">
+                            <div style="margin: 0 auto" [chart]="donutChart" class="under-mainchart"></div>
+                        </div>
+                        <div class="main-description">
+                            <div class="detail-items"><img src="../../../assets/icons/2.png" class="image-icons" />
+                                <p>Sistemas con póliza<br /><span id="numbers">{{policies.activePolicies}}</span></p>
+                            </div>
+                            <div class="detail-items"><img src="../../../assets/icons/5.png" class="image-icons" />
+                                <p>Sistemas sin póliza<br /><span id="numbers">{{policies.withOutPolicy}}</span></p>
+                            </div>
+                            <div class="detail-items"><img src="../../../assets/icons/4.png" class="image-icons" />
+                                <p>Póliza próxima a vencer<br /><span id="numbers">{{policies.nextToExpire}}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="footer-above-para">Estado actual de garantías en sistemas con póliza:</p>
+                    <div class="chart-footer">
+                        <div class="left-button foot">
+                            <img src="../../../assets/icons/1.png" class="image-icons" />
+                            <div class="foot-letters">
+                                <p>Bajo lo esperado</p>
+                                <p class="foot-numbers">{{policies.underExpected}} sistemas</p>
+                            </div>
+                        </div>
+                        <div class="right-button foot">
+                            <img src="../../../assets/icons/3.png" class="image-icons" />
+                            <div class="foot-letters">
+                                <p>En lo esperado</p>
+                                <p class="foot-numbers">{{policies.overExpected}} sistemas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <!-- END CHART COMPONENET PART -->
+
+            </div>
+        
+    </section>
+</div>

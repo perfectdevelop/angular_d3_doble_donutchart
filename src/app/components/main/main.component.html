@@ -1,0 +1,52 @@
+<mat-drawer-container class="mainContainer" (window:resize)="onResize()">
+    <mat-drawer #drawer mode="{{modeSlide}}" class="sideBar">
+
+        <mat-list>
+            <mat-list-item>
+                <button mat-button class="menuBtn" routerLink="/home/dashboard">
+                    <mat-icon>check</mat-icon>
+                    <span class="butonLabel">DASHBOARD</span>
+                </button>
+            </mat-list-item>
+        </mat-list>
+
+        <div class="back-container">
+            <span class="example-spacer icon-class-size"></span>
+            <button mat-icon-button color="primary" (click)="drawer.toggle();btnShow()">
+                <mat-icon>keyboard_arrow_left</mat-icon>
+            </button>
+        </div>
+
+    </mat-drawer>
+
+    <mat-drawer-content class="draw-content">
+
+        <!-- <div class="lateral-menu">
+            <button mat-button class="menuBtn-latareal" routerLink="/dashboard/map">
+                ALGO
+            </button>
+            <div class="under-menu">
+                <div class="back-container">
+                    <button class="menuBtn-latareal-On" mat-icon-button color="primary"
+                        (click)="drawer.toggle();btnShow()">
+                        <mat-icon>keyboard_arrow_right</mat-icon>
+                    </button>
+                </div>
+            </div> -->
+
+
+
+            <div class="body-content">
+                <mat-toolbar class="header-main">
+                    
+                            <button mat-icon-button color="primary"
+                                (click)="drawer.toggle();btnShow()">
+                                <mat-icon>keyboard_arrow_right</mat-icon>
+                            </button>
+                </mat-toolbar>
+                <div class="custom-scroll-all">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+    </mat-drawer-content>
+</mat-drawer-container>
